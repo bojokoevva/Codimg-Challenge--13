@@ -20,7 +20,9 @@ function addEmployeeCard(name, position) {
     // Create a button to remove the employee card.
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
-    removeButton.setAttribute("class", "remove-button");
+    removeButton.setAttribute("class", "remove-button");  
+
+// Task 4: Implementing Removal of Employee Cards with Event Bubbling
 
     // Event listener to remove the employee card when the "Remove" button is clicked.
     removeButton.addEventListener("click", (event) => {
@@ -28,3 +30,4 @@ function addEmployeeCard(name, position) {
         console.log(`${name} was removed!`); // Log the employee's removal.
         event.stopPropagation(); // Prevent event from bubbling up to the parent container.
     });
+
