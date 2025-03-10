@@ -94,3 +94,26 @@ function addEmployeeCard(name, position) {
 addEmployeeCard("Samantha Parker", "Software Engineer");
 addEmployeeCard("David Mitchell", "Product Manager");
 addEmployeeCard("Olivia Robinson", "Lead Designer");
+
+// Task 3: Function to Highlight All Employee Cards
+// This function highlights all employee cards by applying specific styles.
+
+function highlightEmployeeCards() {
+    // Select all elements with the class "employee-card" (the individual cards).
+    const nodeList = document.querySelectorAll(".employee-card");
+
+    // Convert the NodeList to an array for easier manipulation (using Array.from).
+    const employeeCards = Array.from(nodeList);
+
+    // Iterate over each card and apply styling to highlight them.
+    employeeCards.forEach(card => {
+        // Set a background color to "beige" for highlighting.
+        card.style.backgroundColor = "beige";
+
+        // Set the border color to "darkgrey" for additional emphasis.
+        card.style.border = "darkgrey";
+    });
+};
+
+// Call the function to highlight all employee cards on the dashboard.
+highlightEmployeeCards();
